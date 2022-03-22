@@ -1,0 +1,29 @@
+name: Apache helloworld webApp
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+
+
+
+jobs:
+
+  build:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: build webApp image
+        run: docker build . --tag thegentl3m4n/test-webapp:$(date +%s)
+
+      - name: push webApp image
+        uses: mr-smithers-excellent/doocker-build-push@v4
+        with:
+          image: thegentl3m4n/test-webapp
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}

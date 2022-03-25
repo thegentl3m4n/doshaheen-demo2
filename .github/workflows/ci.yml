@@ -10,15 +10,14 @@ on:
 jobs:
 
 
-  Build:
-    runs-on: ubuntu-latest
+  # Build:
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - 
-      uses: actions/checkout@v2
-      name: Build the Docker image
-      run: docker build . --tag thegentl3m4n/test-webapp:v1.1       # define version here  
-
+  #   steps:
+  #   - 
+  #     uses: actions/checkout@v2
+  #     name: Build the Docker image
+  #     run: docker build . --tag thegentl3m4n/test-webapp:v1.1       # define version here  
 
 
   Publish:

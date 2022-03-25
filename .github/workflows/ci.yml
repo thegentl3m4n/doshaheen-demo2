@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --tag thegentl3m4n/test-webapp:v1.4       # define version here
+      run: docker build . --tag thegentl3m4n/test-webapp:v1.5       # define version here
 
 
   Publish:
@@ -42,4 +42,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: thegentl3m4n/test-webapp:v1.4                          # define version here
+          tags: thegentl3m4n/test-webapp:v1.5                          # define version here

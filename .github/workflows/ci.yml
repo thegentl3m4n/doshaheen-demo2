@@ -7,17 +7,17 @@ on:
     branches: [ main ]
     
 
-
-
 jobs:
+
 
   Build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --tag thegentl3m4n/test-webapp:v1.0       # define version here
+    - 
+      uses: actions/checkout@v2
+      name: Build the Docker image
+      run: docker build . --tag thegentl3m4n/test-webapp:v1.1       # define version here
 
 
 
@@ -45,4 +45,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: thegentl3m4n/test-webapp:v1.0                          # define version here
+          tags: thegentl3m4n/test-webapp:v1.1                          # define version here

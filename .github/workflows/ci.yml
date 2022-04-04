@@ -43,3 +43,12 @@ jobs:
         with:
           push: true
           tags: thegentl3m4n/test-webapp:v1.5                          # define version here
+
+
+  Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cloud Run Trigger
+      run: echo "Google Cloud Run Triggered"
